@@ -1,7 +1,7 @@
 Remember that multiple variables can refer to the same object.
 
 In the diagram below, there are only 2 `Room` objects, total. (There are more in the game, obviously, but in this diagram, there are 2.)
-
+ 
 There are 5 variables. 3 of them point to the one Room object that is the foyer:
 
 * `room['foyer']`
