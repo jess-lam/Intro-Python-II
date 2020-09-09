@@ -44,6 +44,10 @@ new_player = Player("Jess", room["outside"])
 print(new_player)
 
 #print(new_player)
+# print(room.items())
+# print(room.get("outside"))
+# print(room.get("outside").name)
+# print(room.get("outside").description)
 
 # Write a loop that:
 #
