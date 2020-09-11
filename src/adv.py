@@ -42,8 +42,8 @@ room['treasure'].s_to = room['narrow']
 
 new_player = Player("Jess", room["outside"])
 
-#print(f" {new_player.name} is in {new_player.current_room.name}")
-#print(new_player.current_room.description)
+print(f" {new_player.name} is in {new_player.current_room.name}")
+print(new_player.current_room.description)
 
 #$print(room[new_player.current_room].description)
 
@@ -78,17 +78,17 @@ while True:
     selection = input("Please make a move.")
     if selection == 'n' or selection == 's' or selection == 'e' or selection == 'w':
         if selection == 'n':
-            return new_player.current_room.n_to
-            print(new_player.current_room.n_to)
+            new_player.current_room = new_player.current_room.n_to
+            print(new_player.current_room)
         elif selection == 's':
-            return new_player.current_room.s_to
-            print(new_player.current_room.s_to)
+            new_player.current_room = new_player.current_room.s_to
+            print(new_player.current_room)
         elif selection == 'e':
-            return new_player.current_room.e_to
-            print(new_player.current_room.e_to)
+            new_player.current_room = new_player.current_room.e_to
+            print(new_player.current_room)
         elif selection == 'w':
-            return new_player.current_room.w_to
-            print(new_player.current_room.w_to)
+            new_player.current_room = new_player.current_room.w_to
+            print(new_player.current_room)
     elif selection == 'q':
         print(f"See you next time {new_player.name}!")
     else:
