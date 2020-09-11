@@ -41,7 +41,8 @@ room['treasure'].s_to = room['narrow']
 # Make a new player object that is currently in the 'outside' room.
 
 new_player = Player("Jess", room["outside"])
-print(f" {new_player.name} is in {new_player.current_room.name}")
+
+#print(f" {new_player.name} is in {new_player.current_room.name}")
 #print(new_player.current_room.description)
 
 #$print(room[new_player.current_room].description)
@@ -64,13 +65,38 @@ for r in room:
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
-while True:
-    print(f"\n Currently in room: {new_player.current_room.name}")
-    print(f"\n Room Description: {new_player.current_room.description}")
+#while True:
+#print(f"\n Currently in room: {new_player.current_room.name}")
+#print(f"\n Room Description: {new_player.current_room.description}")
+#print(new_player.current_room)
 
-    """
-    Now need to implement input
-    """
+#new_place = new_player.current_room.n_to
+#print(new_place)
+
+
+while True:
+    selection = input("Please make a move.")
+    if selection == 'n' or selection == 's' or selection == 'e' or selection == 'w':
+        if selection == 'n':
+            return new_player.current_room.n_to
+            print(new_player.current_room.n_to)
+        elif selection == 's':
+            return new_player.current_room.s_to
+            print(new_player.current_room.s_to)
+        elif selection == 'e':
+            return new_player.current_room.e_to
+            print(new_player.current_room.e_to)
+        elif selection == 'w':
+            return new_player.current_room.w_to
+            print(new_player.current_room.w_to)
+    elif selection == 'q':
+        print(f"See you next time {new_player.name}!")
+    else:
+        print("Movement isn't allowed. Please select n for North, s for South, e for East, w for West, or q for Quit.")
+        
+
+
+
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
